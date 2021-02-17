@@ -1,2 +1,2 @@
-# pagination-and-filtering
+# Pagination & Filtering
  My Second Techdegree Project
