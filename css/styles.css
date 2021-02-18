@@ -172,8 +172,6 @@ header h2 {
   color: #fff;
 }
 
-
-
 .no-results {
 	font-family: 'Nunito', sans-serif;
 	display: block;
@@ -207,4 +205,10 @@ header h2 {
 		border-radius: 5px;
 		box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.09);
 	}
+}
+
+/* My Styles */
+
+strong {
+  font-weight: bold;
 }

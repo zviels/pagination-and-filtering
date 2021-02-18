@@ -3,8 +3,13 @@
 // Elements
 
 const header = document.querySelector('header');
+const page = document.querySelector('.page');
 const studentList = document.querySelector('.student-list');
 const linkList = document.querySelector('.link-list');
+
+// Variables
+
+let searchResults = [];
 
 // createElement
 
@@ -86,9 +91,15 @@ const itemsPerPage = () => 9;
 
 const getPaginationButtons = () => document.querySelectorAll('.link-list button');
 
-// showPage
+// getSearchBox
 
-// To Do: Only Nine Students Should Be Displayed On Each Page
+const getSearchBox = () => document.querySelector('#search');
+
+// getSearchButton
+
+const getSearchButton = () => document.querySelector('.student-search button');
+
+// showPage
 
 const showPage = (pageNum, list) => {
 
@@ -128,9 +139,11 @@ const showPage = (pageNum, list) => {
 
 // addPagination
 
-const addPagination = () => {
+const addPagination = (list) => {
 
-   const numOfPages = Math.ceil(data.length / itemsPerPage());
+   linkList.innerHTML = '';
+
+   const numOfPages = Math.ceil(list.length / itemsPerPage());
 
    for (let i = 1; i <= numOfPages; i ++) {
 
@@ -158,13 +171,62 @@ const setActiveButton = (requestedPage) => {
 
 }
 
+// searchTerm
+
+const searchTerm = (term) => {
+
+   searchResults = [];
+   term = term.toUpperCase();
+
+   for (let i = 0; i < data.length; i ++) {
+
+      const studentName = (data[i].name.first + ' ' + data[i].name.last).toUpperCase();
+      const studentEmail = data[i].email.toUpperCase();
+      const joiningDate = data[i].registered.date;
+
+      if (studentName.indexOf(term) > -1 || studentEmail.indexOf(term) > -1 || joiningDate.indexOf(term) > -1)
+         searchResults.push(data[i]);   
+
+   }
+
+   loadPage(1, searchResults);
+
+}
+
+// addBoxListener
+
+const addBoxListener = () => getSearchBox().addEventListener('keyup', () => searchTerm(getSearchBox().value));
+
 // addButtonListeners
 
 const addButtonListeners = () => {
 
-   const paginationButtons = getPaginationButtons();
+   // A Function To Add Event Listeners To The Search Button
+
+   const addSearchButtonListener = () => {
+
+      const searchButton = getSearchButton();
+
+      // Add Click Event Listener
+
+      searchButton.addEventListener('click', () => {
+
+         // Get The Term To Search From The Search Box
+
+         const term = getSearchBox().value;
+         searchTerm(term);
+
+      });
+
+   }
+
+   // Add An Event Listener To The Search Button
+
+   addSearchButtonListener();
 
    // Add An Event Listener To Each Pagination Button
+
+   const paginationButtons = getPaginationButtons();
 
    for (let i = 0; i < paginationButtons.length; i ++) {
 
@@ -172,7 +234,12 @@ const addButtonListeners = () => {
 
          const requestedPage = i + 1;
          setActiveButton(requestedPage);
-         showPage(requestedPage, data);
+
+         if (searchResults.length > 0)
+            showPage(requestedPage, searchResults);
+         
+         else
+            showPage(requestedPage, data); 
 
       });
 
@@ -180,18 +247,103 @@ const addButtonListeners = () => {
 
 }
 
+// noResultsMessage
+
+const noResultsMessage = (message) => {
+
+   // styleElement
+
+   const styleElement = (element, styles) => {
+
+      const keys = Object.keys(styles);
+      const values = Object.values(styles);
+
+      for (let i = 0; i < keys.length; i ++)
+         element.style[keys[i]] = values[i];
+
+   }
+
+   // getSadIcon
+
+   const getSadIcon = () => {
+
+      const div = createElement('div', { className: 'sad-icon' });
+      const i = createElement('i', { className: 'far fa-sad-cry' });
+
+      styleElement(i, { fontSize: '10em', color: '#A9CBEF' });
+
+      div.appendChild(i);
+      return div;
+
+   }
+
+   const div = createElement('div', { className: 'no-results' });
+   const h3 = createElement('h3', { textContent: message });
+   const sadIcon = getSadIcon();
+   const h4 = createElement('h4', { textContent: 'Please Try Searching Again!' });
+
+   styleElement(div, { margin: '0 auto', textTransform: 'uppercase', display: 'none',
+                       minHeight: '400px', flexDirection: 'column', justifyContent: 'space-between',
+                       textAlign: 'center' });
+
+
+   div.append(h3, sadIcon, h4);
+
+   page.appendChild(div);
+   return div;
+
+}
+
+// noResultsDiv
+
+const noResultsDiv = () => document.querySelector('.no-results');
+
+// noResultsH3
+
+const noResultsH3 = () => noResultsDiv().firstElementChild;
+
+// printNoResultsMessage
+
+const printNoResultsMessage = (list) => {
+
+   if (list.length > 0)
+      noResultsDiv().style.display = 'none';
+
+   else {
+
+      const term = getSearchBox().value;
+
+      noResultsDiv().style.display = 'flex';
+      noResultsH3().innerHTML = 'No Results Found For <strong>' + term + '</strong>.';
+
+   }
+      
+
+}
+
+// loadPage
+
+const loadPage = (pageNum, list) => {
+
+   addPagination(list);
+   addButtonListeners();
+   setActiveButton(pageNum);
+   showPage(pageNum, list);
+   printNoResultsMessage(list);
+
+}
+
 // Activation Function
 
-const run = (pageNum, list) => {
+const run = (list) => {
 
    createSearchBar();
-   addPagination();
-   addButtonListeners();
-   showPage(pageNum, list);
-   setActiveButton(pageNum);
+   noResultsMessage('No Results Found');
+   loadPage(1, list);
+   addBoxListener();
 
 }
 
 // Run The Script
 
-run(1, data);
+run(data);
