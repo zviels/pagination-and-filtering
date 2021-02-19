@@ -212,3 +212,18 @@ header h2 {
 strong {
   font-weight: bold;
 }
+
+.fa-sad-cry {
+  font-size: 10em;
+  color: #A9CBEF;
+}
+
+.no-results {
+  min-height: 400px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
