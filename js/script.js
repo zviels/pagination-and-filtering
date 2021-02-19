@@ -382,6 +382,8 @@ const loadPage = (pageNum, list) => {
 
 }
 
+// Run
+
 const run = (list) => {
 
    createSearchBar();
