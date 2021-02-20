@@ -52,8 +52,8 @@ const setActiveButton = (pageNum) => {
          button.className = 'active';
 
       else
-         button.className = '';   
-
+         button.className = '';
+   
 }
 
 // Functions To Create HTML Elements
@@ -172,7 +172,7 @@ const noResultsMessage = () => {
 
 const showPage = (pageNum, list) => {
 
-   // The 'getStudentDetails' Function Extracts Student Details From The Provided List
+   // The 'getStudentDetails' Function Extracts Student Details From The Provided Student
 
    const getStudentDetails = (student) => {
 
