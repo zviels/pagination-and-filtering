@@ -101,5 +101,6 @@ Thanks to [Treehouse](https://teamtreehouse.com) for providing the starter files
 
 - `index.html`
 - `styles.css`
+- `data.js`
 
 In addition, a huge thank you to everyone who reviewed the project!
