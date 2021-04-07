@@ -51,19 +51,19 @@ To exceed expectations -
 - The pagination buttons had to display the correct page.
 - Clicking between or outside of pagination buttons shouldn't have triggered the click event.
 - The `active` class name had to be added to the most recently clicked pagination button. Furthermore, there should have been only one active button at any given time.
-- Project had to have the correct number of pagination buttons, and they should have been numbered correctly. For example - if there are forty-two students, there should be five pagination buttons, numbering 1 through 5.
+- Project had to have the correct number of pagination buttons, and they should have been numbered correctly. For example - if there were forty-two students, there should have been five pagination buttons, numbering 1 through 5.
 
-To exceed expectations, the number of pages and pagination buttons had to be changed based on how many search results are returned. For example - if nine or fewer results are returned, zero or one pagination buttons are displayed. If twenty-two search results are returned, three pagination buttons are displayed.
+To exceed expectations, the number of pages and pagination buttons had to be changed based on how many search results are returned. For example - if nine or fewer results were returned, zero or one pagination buttons should have been displayed. If twenty-two search results were returned, three pagination buttons should have been displayed.
 
 #### Paging
 
 - The first nine students from the array of objects in the `js/data.js` file should have been displayed when the page was first loaded.
-- Clicking on a pagination button should have displayed the correct number of students. For example - clicking on button number `1` should show students 1 to 9, clicking on button number `2` should show students 10 to 18, etc.
+- Clicking on a pagination button should have displayed the correct number of students. For example - clicking on button number `1` should have shown students 1 to 9, clicking on button number `2` should have shown students 10 to 18, etc.
 
 To exceed expectations - 
 
 - I had to display a "No Results" message when a search yields zero results. I also had to remove or hide this message when students are displayed on the page again.
-- After a search, pages had to display only students that match the search criteria. The pages also had to display the correct number of students. For example - if twenty-two search results are returned, the third and final page should only display four students.
+- After a search, pages had to display only students that match the search criteria. The pages also had to display the correct number of students. For example - if twenty-two search results were returned, the third and final page should have displayed only four students.
 
 #### Code Quality
 
