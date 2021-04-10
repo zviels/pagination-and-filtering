@@ -27,7 +27,7 @@ The app works with a list of any number of students, not just with the supplied 
 
 To view the app -
 
-- You can [download the ZIP file](https://github.com/zviels/pagination-and-filtering/archive/refs/heads/main.zip), extract it and open `index.html`.
+- You can [download the ZIP file](https://github.com/zviels/pagination-and-filtering/archive/refs/heads/gh-pages.zip), extract it and open `index.html`.
 - Alternatively, you can watch the app online [here](https://zviels.github.io/pagination-and-filtering).
 
 ## Overview
