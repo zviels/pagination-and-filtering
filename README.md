@@ -7,7 +7,21 @@ I was given a file that contains information about forty-two students, including
 - Display the first nine students on the page.
 - Add pagination buttons that the user can click on to display different pages of students.
 
-The app works with a list of any number of students, not just with the supplied array of forty-two students. 
+The app works with a list of any number of students, not just with the supplied array of forty-two students.
+
+## Table of Contents
+
+- [Preview](https://github.com/zviels/pagination-and-filtering#preview)
+- [Quick Start](https://github.com/zviels/pagination-and-filtering#quick-start)
+- [Overview](https://github.com/zviels/pagination-and-filtering#overview)
+- [Built With](https://github.com/zviels/pagination-and-filtering#built-with)
+- [Thanks](https://github.com/zviels/pagination-and-filtering#thanks)
+
+## Preview
+
+<a href="https://zviels.github.io/pagination-and-filtering">
+  <img src="https://i.imgur.com/aJfNWcj.gif" alt="App Preview" width="100%">
+</a>
 
 ## Quick Start
 
@@ -29,9 +43,11 @@ As mentioned above, I developed this app as part of my studies at [Treehouse](ht
 
 Here is what I learned before I started working on the project -
 
-- CSS Selectors Quickstart
-- JavaScript and the DOM
-- DOM Scripting By Example
+- CSS Selectors Quickstart <img src="https://img.shields.io/badge/-CSS%20Course-3659a2" alt="CSS Course">
+- JavaScript and the DOM <img src="https://img.shields.io/badge/-JS%20Course-3659a2" alt="JS Course">
+- DOM Scripting By Example <img src="https://img.shields.io/badge/-JS%20Course-3659a2" alt="JS Course">
+
+I also learned how to structure my code, debug JS in the browser, write pseudocode and translate it to a valid, working code.
 
 ### Project Requirements
 
@@ -85,6 +101,8 @@ There are two possible grades for each Techdegree project - "Meets Expectations"
 
 This project received the **"Exceeds Expectations"** rating.
 
+:100:
+
 ## Built With
 
 - HTML
@@ -103,4 +121,4 @@ Thanks to [Treehouse](https://teamtreehouse.com) for providing the starter files
 - `styles.css`
 - `data.js`
 
-In addition, a huge thank you to everyone who reviewed the project!
+In addition, a huge thank you to everyone who reviewed the project! :grinning:
