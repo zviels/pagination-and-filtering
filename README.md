@@ -11,11 +11,11 @@ The app works with a list of any number of students, not just with the supplied 
 
 ## Table of Contents
 
-- [Preview](https://github.com/zviels/pagination-and-filtering#preview)
-- [Quick Start](https://github.com/zviels/pagination-and-filtering#quick-start)
-- [Overview](https://github.com/zviels/pagination-and-filtering#overview)
-- [Built With](https://github.com/zviels/pagination-and-filtering#built-with)
-- [Thanks](https://github.com/zviels/pagination-and-filtering#thanks)
+- [Preview](https://github.com/zviels/pagination-and-filtering/tree/gh-pages#preview)
+- [Quick Start](https://github.com/zviels/pagination-and-filtering/tree/gh-pages#quick-start)
+- [Overview](https://github.com/zviels/pagination-and-filtering/tree/gh-pages#overview)
+- [Built With](https://github.com/zviels/pagination-and-filtering/tree/gh-pages#built-with)
+- [Thanks](https://github.com/zviels/pagination-and-filtering/tree/gh-pages#thanks)
 
 ## Preview
 
