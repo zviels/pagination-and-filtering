@@ -20,7 +20,7 @@ The app works with a list of any number of students, not just with the supplied 
 ## Preview
 
 <a href="https://zviels.github.io/pagination-and-filtering">
-  <img src="https://i.imgur.com/aJfNWcj.gif" alt="App Preview" width="100%">
+  <img src="https://deab9i1yeabp0.cloudfront.net/github/treehouse/pagination-and-filtering/pagination-and-filtering.gif" alt="App Preview" width="100%">
 </a>
 
 ## Quick Start
@@ -51,39 +51,7 @@ I also learned how to structure my code, debug JS in the browser, write pseudoco
 
 ### Project Requirements
 
-#### External Vanilla JavaScript
-
-- I was not allowed to use jQuery or some other library, plugin or borrowed code snippet.
-- I had to link all JavaScript code from external files.
-- I had to create the markup for the student list and pagination buttons dynamically, with JavaScript.
-
-To exceed expectations -
-
-- I had to use JavaScript to append HTML for a search bar.
-- In addition, the search bar had to match the layout of the example in the mockup file I received, or to have custom styling.
-
-#### Pagination Buttons
-
-- The pagination buttons had to display the correct page.
-- Clicking between or outside of pagination buttons shouldn't have triggered the click event.
-- The `active` class name had to be added to the most recently clicked pagination button. Furthermore, there should have been only one active button at any given time.
-- Project had to have the correct number of pagination buttons, and they should have been numbered correctly. For example - if there were forty-two students, there should have been five pagination buttons, numbering 1 through 5.
-
-To exceed expectations, the number of pages and pagination buttons had to be changed based on how many search results are returned. For example - if nine or fewer results were returned, zero or one pagination buttons should have been displayed. If twenty-two search results were returned, three pagination buttons should have been displayed.
-
-#### Paging
-
-- The first nine students from the array of objects in the `js/data.js` file should have been displayed when the page was first loaded.
-- Clicking on a pagination button should have displayed the correct number of students. For example - clicking on button number `1` should have shown students 1 to 9, clicking on button number `2` should have shown students 10 to 18, etc.
-
-To exceed expectations - 
-
-- I had to display a "No Results" message when a search yields zero results. I also had to remove or hide this message when students are displayed on the page again.
-- After a search, pages had to display only students that match the search criteria. The pages also had to display the correct number of students. For example - if twenty-two search results were returned, the third and final page should have displayed only four students.
-
-#### Code Quality
-
-To meet the project requirements, I also had to add comments to the `js/script.js` file. In addition, uncaught errors shouldn't have appeared in the Chrome DevTools console when using the app in Chrome. 
+You can view the project requirements [here](https://deab9i1yeabp0.cloudfront.net/github/treehouse/pagination-and-filtering/project-requirements.jpg).
 
 ### Additional Features
 
@@ -101,6 +69,8 @@ There are two possible grades for each Techdegree project - "Meets Expectations"
 
 This project received the **"Exceeds Expectations"** rating.
 
+[See the full project review](https://deab9i1yeabp0.cloudfront.net/github/treehouse/pagination-and-filtering/project-review.jpg).
+
 :100:
 
 ## Built With
@@ -112,7 +82,7 @@ This project received the **"Exceeds Expectations"** rating.
 ## Thanks
 
 <a href="https://teamtreehouse.com">
-  <img src="https://static.teamtreehouse.com/assets/marketing/opengraph/logo_twitter-cd0ecb90408499f45a2191805f54362981da5a69ddcfaa6ec93556d64e289036.png" alt="Treehouse Logo" width="100%" height="50%">
+  <img src="https://deab9i1yeabp0.cloudfront.net/github/treehouse/treehouse-logo.png" alt="Treehouse Logo" width="100%" height="50%">
 </a>
 
 Thanks to [Treehouse](https://teamtreehouse.com) for providing the starter files for this project -
